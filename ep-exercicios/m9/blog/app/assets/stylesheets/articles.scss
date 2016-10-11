@@ -1,3 +1,20 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+img.article-image {
+  width: 35px;
+  height: 35px;
+}
+
+#article {
+  .author {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ca3b3a;
+  }
+
+  .category {
+    margin: 15px 0;
+  }
+}

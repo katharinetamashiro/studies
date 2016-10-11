@@ -6,7 +6,7 @@
         <div class="col-md-3">
           <div class="article">
             <div class="title">
-              <a href="#"><%= article.title %></a>
+              <%= link_to article.title, controller: :blog, action: :article, id: article.id %>
             </div>
             <div class="author">
               <%= article.author %>
@@ -14,6 +14,9 @@
             <div class="category">
               <%= article.category %>
             </div>
+            <div class="ver">
+              <%= link_to 'Ver', {controller: :blog, action: :article, id: article.id}, class: 'btn btn-danger' %>
+              </div>
           </div>
         </div>
       <% end %>
