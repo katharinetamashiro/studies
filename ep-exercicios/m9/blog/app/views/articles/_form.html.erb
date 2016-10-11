@@ -1,0 +1,47 @@
+<%= form_for(article, html: {class: 'form-horizontal'}) do |f| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <p><%= pluralize(agency.errors.count, 'erro impediu', 'erros impediram') %> que o produto fosse salvo:</p>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :title, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_field :title, class: 'form-control', placeholder: 'Televisor de 24" LED' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :author, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_field :author, class: 'form-control', placeholder: 'My name'  %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_field :category, class: 'form-control', placeholder: 'Eletrônicos' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_area :content, class: 'form-control', placeholder: 'Essa TV possui uma imagem de excelente qualidade e vem pronta para os serviços de assinatura...'  %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: 'btn btn-primary' %>
+      <%= link_to 'Cancelar', articles_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>

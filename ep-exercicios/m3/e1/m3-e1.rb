@@ -28,7 +28,7 @@ assert_equal 'verdadeiro', tipo_valor('')
 
 # ConcatenaÃ§Ã£o
 string = 'Ola, ' + 'Mundo'
-assert_equal "Ola, Mundo", string
+assert_equal 'Ola, Mundo', string
 
 ola = 'Ola, '
 mundo = 'Mundo'

@@ -1,0 +1,14 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      article:
+        one: artigo
+        other: artigos
+
+    attributes:
+      article:
+        title: Título
+        author: Autor
+        category: Categoria
+        content: Conte'údo

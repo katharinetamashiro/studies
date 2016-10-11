@@ -4,7 +4,6 @@ def factorial (n)
     else
         n * factorial(n-1)
     end        
-    
 end
 
 def reverse (text)
@@ -12,18 +11,16 @@ def reverse (text)
     i=0
     text_array =[]
     text.split("")
-    
     while (i < (text.size)) do
         text_array[i] = text[n]
         i += 1
         n -= 1
     end
-        return text_array.join("")
+    return text_array.join("")
 end
 
 def sort (array)
     i=0
-
     while (i < array.size) do
         j=i+1
         while (j < array.size) do
@@ -34,7 +31,6 @@ def sort (array)
         end
         i +=1
     end
-    
     return array
 end
 

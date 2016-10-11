@@ -1,0 +1,57 @@
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#header {
+  background-color: #ca3b3a;
+  padding: 30px 0;
+}
+
+#footer {
+  background-color: #ccc;
+  padding: 30px 0;
+}
+
+#main {
+  padding: 30px 0;
+  min-height: 450px;
+}
+
+#top-search {
+  padding-top: 10px;
+
+  input {
+    width: 350px;
+  }
+}
+
+#categories {
+  background-color: #000;
+
+  a {
+    color: #fff;
+    border-radius: 0;
+  }
+  a:hover {
+    background-color: #444;
+  }
+  .active a {
+    background-color: #f0ad4e;
+  }
+}
+
+#articles {
+  text-align: center;
+  margin: 60px 0;
+
+  .product {
+    margin-bottom: 60px;
+
+    .category { margin-top: 5px; }
+    .title { margin-top: 10px; }
+    .buy .btn {
+      margin-top: 10px;
+      border-radius: 0;
+    }
+  }
+}

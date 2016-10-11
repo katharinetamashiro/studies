@@ -1,0 +1,40 @@
+<% if (n = notice).present? %><p class="alert alert-warning"><%= n %></p><% end %>
+
+<h1>
+  Artigos
+
+  &nbsp;
+  <%= link_to new_article_path, class: 'btn btn-sm btn-default' do %>
+    <i class="fa fa-plus"></i> Adicionar
+  <% end %>
+</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Autor</th>
+      <th>Categoria</th>
+      <th>Conteúdo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.author %></td>
+        <td><%= article.category %></td>
+        <td><%= article.content %></td>
+        <td nowrap>
+          <%= link_to edit_article_path(article), class: 'btn btn-sm btn-primary' do %>
+            <i class="fa fa-edit"></i> Editar
+          <% end %>
+          <%= link_to article, method: :delete, data: { confirm: 'Você tem certeza de que deseja remover este item?' }, class: 'btn btn-sm btn-danger' do %>
+            <i class="fa fa-trash"></i> Remover
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

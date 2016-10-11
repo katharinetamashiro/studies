@@ -1,0 +1,23 @@
+<div id="articles">
+  <% @articles.in_groups_of(4, false).each do |articles_group| %>
+
+    <div class="row">
+      <% articles_group.each do |article| %>
+        <div class="col-md-3">
+          <div class="article">
+            <div class="title">
+              <a href="#"><%= article.title %></a>
+            </div>
+            <div class="author">
+              <%= article.author %>
+            </div>
+            <div class="category">
+              <%= article.category %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  <% end %>
+</div>
